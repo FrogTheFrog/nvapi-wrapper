@@ -37,5 +37,4 @@ set(SOURCES
 #----------------------------------------------------------------------------------------------------------------------
 
 add_library(${PROJECT_NAME} ${HEADERS} ${SOURCES})
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/externals
-                                                  ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/externals PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
