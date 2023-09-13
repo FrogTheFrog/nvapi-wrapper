@@ -1,5 +1,5 @@
 #----------------------------------------------------------------------------------------------------------------------
-# Cmake settings
+# General settings
 #----------------------------------------------------------------------------------------------------------------------
 
 cmake_minimum_required(VERSION 3.27)
@@ -16,8 +16,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #----------------------------------------------------------------------------------------------------------------------
 
 set(HEADERS
-    src/nvapidrssession.h
-    src/nvapiwrapper.h
+    src/nvapiwrapper/nvapidrssession.h
+    src/nvapiwrapper/nvapiwrapper.h
     )
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -25,13 +25,14 @@ set(HEADERS
 #----------------------------------------------------------------------------------------------------------------------
 
 set(SOURCES
-    src/nvapidrssession.cpp
-    src/nvapiwrapper.cpp
+    src/nvapiwrapper/nvapidrssession.cpp
+    src/nvapiwrapper/nvapiwrapper.cpp
     )
 
 #----------------------------------------------------------------------------------------------------------------------
-# Target config
+# Target settings
 #----------------------------------------------------------------------------------------------------------------------
 
 add_library(${PROJECT_NAME} ${HEADERS} ${SOURCES})
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/externals)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/externals
+                                                  ${CMAKE_CURRENT_SOURCE_DIR}/src)
