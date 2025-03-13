@@ -16,6 +16,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #----------------------------------------------------------------------------------------------------------------------
 
 set(HEADERS
+    src/nvapiwrapper/fixednvapi.h
     src/nvapiwrapper/nvapidrssession.h
     src/nvapiwrapper/nvapiheaders.h
     src/nvapiwrapper/nvapiwrapper.h

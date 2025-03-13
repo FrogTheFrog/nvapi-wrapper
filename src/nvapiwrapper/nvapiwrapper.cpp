@@ -12,7 +12,7 @@
 #include <system_error>
 
 // local includes
-#include "nvapi-open-source-sdk/nvapi_interface.h"
+#include "nvapi/nvapi_interface.h"
 
 //--------------------------------------------------------------------------------------------------
 
